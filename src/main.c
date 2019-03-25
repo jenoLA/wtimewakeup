@@ -22,10 +22,9 @@ int main(int argc, char const *argv[])
             }
             // times of the cycle
             char* cycles[] = {"three", "four", "five", "six"};
-
-            printf("\n");
+            float hours[] = {4.30, 6, 7.30, 9};
             for (int i = 0; i < 4; ++i)
-                printf("%s cycles: %i:%i H \n\n", cycles[i], time[i][0], time[i][1]);
+                printf("\n%s cycles: %i:%i (%0.2f Hours) \n", cycles[i], time[i][0], time[i][1], hours[i]);
             
             exit(0);
         }
