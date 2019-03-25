@@ -1,7 +1,7 @@
 #include "sleepcycle.h"
 #include <stdio.h>
 
-void timeToWakeUp(int (*array)[2], char const* time)
+int timeToWakeUp(int (*array)[2], char const* time)
 {
 	int HH, MM;
 	sscanf(time, "%i:%i", &HH, &MM);
@@ -24,9 +24,10 @@ void timeToWakeUp(int (*array)[2], char const* time)
 		array[i][0] = HH;
 		array[i][1] = MM;
 	}
+	return 1;
 }
 
-void timeToFallAsleep(int (*array)[2], char const* time)
+int timeToFallAsleep(int (*array)[2], char const* time)
 {
 	int HH, MM;
 	sscanf(time, "%i:%i", &HH, &MM);
@@ -49,4 +50,5 @@ void timeToFallAsleep(int (*array)[2], char const* time)
 		array[i][0] = HH;
 		array[i][1] = MM;
 	}
+	return 1;
 }

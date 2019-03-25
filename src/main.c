@@ -9,24 +9,25 @@ int main(int argc, char const *argv[])
         if(argv[1][0] == '-')
         {
             int time[4][2];
+            int success;
+            
             if (argv[1][1] == 's')
-                timeToWakeUp(time, argv[2]);
+                success = timeToWakeUp(time, argv[2]);
 
             else if (argv[1][1] == 'w')
-                timeToFallAsleep(time, argv[2]);
+                success = timeToFallAsleep(time, argv[2]);
             
-            else
-            {
-                printf("\nusage: wtimewakeup <option> HH:MM\n\n  example:\n\twtimewakeup -w 7:20\n\twtimewakeup -s 23:20\n\n  notice that the time format is 24h\n");
-                exit(1);
-            }
             // times of the cycle
-            char* cycles[] = {"three", "four", "five", "six"};
-            float hours[] = {4.30, 6, 7.30, 9};
-            for (int i = 0; i < 4; ++i)
-                printf("\n%s cycles: %i:%i (%0.2f Hours) \n", cycles[i], time[i][0], time[i][1], hours[i]);
+            if (success)
+            {
+                char* cycles[] = {"three", "four", "five", "six"};
+                float hours[] = {4.30, 6, 7.30, 9};
+                for (int i = 0; i < 4; ++i)
+                    printf("\n%s cycles: %i:%i (%0.2f Hours) \n", cycles[i], time[i][0], time[i][1], hours[i]);
             
-            exit(0);
+                printf("\n");
+                exit(0);
+            }
         }
     }
     
