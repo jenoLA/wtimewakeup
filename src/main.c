@@ -31,9 +31,6 @@ int main(int argc, char const *argv[])
         }
     }
     
-    else
-    {
-		printf("\nusage: wtimewakeup <option> HH:MM\n\n example:\n\twtimewakeup -w 7:20\n\twtimewakeup -s 23:20\n\nnotice that the time format is 24h\n\n");
-		exit(1);
-	}
+    printf("\nusage: wtimewakeup <option> HH:MM\n\n example:\n\twtimewakeup -w 7:20\n\twtimewakeup -s 23:20\n\nnotice that the time format is 24h\n\n");
+    exit(1);
 }
