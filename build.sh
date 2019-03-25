@@ -5,4 +5,4 @@
 #musl-gcc -Wall main.c src/* -o wtimewakeup
 
 #using gcc compiler
-gcc -Wall main.c src/* -o wtimewakeup
+gcc -Wall src/*.c -o wtimewakeup

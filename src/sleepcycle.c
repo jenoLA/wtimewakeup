@@ -1,4 +1,4 @@
-#include "../include/sleepcycle.h"
+#include "sleepcycle.h"
 #include <stdio.h>
 
 void timeToWakeUp(int (*array)[2], char const* time)

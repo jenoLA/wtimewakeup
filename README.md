@@ -6,7 +6,7 @@ this is a simple aplication meant to help you(or at least try) to know what time
 usage
 based on the normal sleep cycle
 
-usage: wtimewakeup <option> HH:MM
+usage: wtimewakeup option HH:MM
 
 	wtimewakeup -w 7:20
 	wtimewakeup -s 23:20
